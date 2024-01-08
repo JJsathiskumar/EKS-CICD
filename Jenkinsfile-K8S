@@ -4,7 +4,7 @@ maven 'Maven3'
 }
 agent any
 environment {
-registry = "165008443062.dkr.ecr.ap-south-1.amazonaws.com/firstecr"
+registry = "165008443062.dkr.ecr.ap-south-1.amazonaws.com/ecrcicd"
 }
 stages {
 stage('Cloning Git') {
