@@ -32,8 +32,8 @@ dockerImage = docker.build registry
 stage('Pushing to ECR') {
 steps{
 script {
-sh 'aws ecr get-login-password --region up-south-1 | docker login --username AWS --password-stdin 165008443062.dkr.ecr.ap-south-1.amazonaws.com/firstecr'
-sh 'docker push 165008443062.dkr.ecr.ap-south-1.amazonaws.com/ecrcicd'
+sh 'aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 165008443062.dkr.ecr.ap-south-1.amazonaws.com'
+sh 'docker push 165008443062.dkr.ecr.ap-south-1.amazonaws.com/ecrcicd:latest'
 }
 }
 }
